@@ -23,7 +23,7 @@ const SplashScreen = () => {
 
   useEffect(() => {
     if (progress === 100) {
-      navigation.replace("Login");
+      navigation.replace("Main");
     }
   }, [progress, navigation]);
 
@@ -64,3 +64,58 @@ const styles = StyleSheet.create({
 });
 
 export default SplashScreen;
+
+// import React, { useEffect } from 'react';
+// import { View, Image, StyleSheet, ActivityIndicator } from 'react-native';
+// import { useNavigation } from '@react-navigation/native';
+// import { useDispatch } from 'react-redux';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
+// import { login } from '../../redux/authSlice';
+// import Images from '../../assets/Images';
+
+// const SplashScreen = () => {
+//   const navigation = useNavigation();
+//   const dispatch = useDispatch();
+
+//   useEffect(() => {
+//     const checkLoginStatus = async () => {
+//       try {
+//         const userId = await AsyncStorage.getItem('userId');
+//         if (userId) {
+//           dispatch(login(userId));
+//           navigation.replace('Main');
+//         } else {
+//           navigation.replace('Auth', { screen: 'Login' });
+//         }
+//       } catch (error) {
+//         console.error('Error checking AsyncStorage:', error);
+//         navigation.replace('Auth', { screen: 'Login' });
+//       }
+//     };
+//     checkLoginStatus();
+//   }, [dispatch, navigation]);
+
+//   return (
+//     <View style={styles.container}>
+//       <Image source={Images.KalaiLogo} style={styles.image} />
+//       <ActivityIndicator size="large" color="#0000FF" />
+//     </View>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//   },
+//   image: {
+//     width: 150,
+//     height: 150,
+//     resizeMode: 'contain',
+//     marginBottom: 20,
+//   },
+// });
+
+// export default SplashScreen;

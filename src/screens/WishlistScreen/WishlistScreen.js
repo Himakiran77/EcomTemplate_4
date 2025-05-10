@@ -45,7 +45,7 @@ const WishlistScreen = ({ navigation }) => {
     >
       <Image source={{ uri: item.image }} style={styles.itemImage} />
       <View style={styles.itemDetails}>
-        <Text style={styles.itemTitle} numberOfLines={1}>{item.title}</Text>
+        <Text style={styles.itemTitle} numberOfLines={1}>{item.title || item.name}</Text>
         <Text style={styles.itemPrice}>${item.price.toFixed(2)}</Text>
       </View>
       <TouchableOpacity 

@@ -31,7 +31,7 @@ const ProductCard = ({ product, onPress }) => {
           numberOfLines={2}
           ellipsizeMode="tail"
         >
-          {product.title}
+          {product.title || product.name}
         </Text>
         <Text style={styles.price}>
           ${product.price.toFixed(2)}

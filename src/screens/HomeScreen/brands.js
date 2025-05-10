@@ -1,0 +1,208 @@
+export const brands = [
+{
+    id: 1,
+    name: 'Wireless Bluetooth Headphones',
+    brand: 'sony',
+    price: 99.99,
+    description: 'High-quality wireless headphones with noise cancellation and 30-hour battery life.',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    categoryId: 1, // Electronics
+    featured: true,
+    dateAdded: '2023-01-15',
+    bannerImage: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+  },
+  {
+    id: 2,
+    name: 'Smart Watch Pro',
+    brand: 'sony',
+    price: 199.99,
+    description: 'Advanced smartwatch with heart rate monitoring, GPS, and water resistance.',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    categoryId: 1, // Electronics
+    featured: true,
+    dateAdded: '2023-02-20',
+    bannerImage: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+  },
+  {
+    id: 3,
+    name: 'Leather Wallet',
+    brand: 'adidas',
+    price: 49.99,
+    description: 'Genuine leather wallet with multiple card slots and RFID protection.',
+    image: 'https://images.unsplash.com/photo-1591561954555-607968c989ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    categoryId: 2, // Fashion
+    featured: false,
+    dateAdded: '2023-03-10',
+    bannerImage: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+  },
+  {
+    id: 4,
+    name: 'Running Shoes',
+    brand: 'nike',
+    price: 89.99,
+    description: 'Lightweight running shoes with cushioned soles for maximum comfort.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    categoryId: 2, // Fashion
+    featured: true,
+    dateAdded: '2023-01-05',
+    bannerImage: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+  },
+  // In products.js, update the cookware product:
+{
+  id: 5,
+  name: 'Non-Stick Cookware Set',
+  brand: 'samsung',
+  price: 129.99,
+  description: '10-piece non-stick cookware set for your kitchen.',
+  image: 'https://media.istockphoto.com/id/1783844521/photo/old-scratched-non-stick-saucepan.webp?a=1&b=1&s=612x612&w=0&k=20&c=CGe35XdOKe4xOh0URUPSqC_0biR8MlqEemUM5OElu9U=', // Updated URL
+  categoryId: 3, // Home & Kitchen
+  featured: true,
+  dateAdded: '2023-04-12',
+  bannerImage: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+},
+  {
+    id: 6,
+    name: 'Blender',
+    brand: 'samsung',
+    price: 59.99,
+    description: 'High-speed blender with multiple settings.',
+    image: 'https://images.unsplash.com/photo-1560343090-f0409e92791a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    categoryId: 3, // Home & Kitchen
+    featured: false,
+    dateAdded: '2023-03-22',
+    bannerImage: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+  },
+  {
+    id: 7,
+    name: 'Skincare Set',
+    brand: 'adidas',
+    price: 39.99,
+    description: 'Complete skincare routine in one package.',
+    image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    categoryId: 4, // Beauty
+    featured: true,
+    dateAdded: '2023-02-18',
+    bannerImage: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+  },
+  {
+    id: 8,
+    name: 'Yoga Mat',
+    brand: 'sony',
+    price: 29.99,
+    description: 'Premium non-slip yoga mat.',
+    image: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    categoryId: 5, // Sports
+    featured: false,
+    dateAdded: '2023-01-30',
+    bannerImage: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+  },
+  {
+    id: 9,
+    name: 'Bestseller Novel',
+    brand: 'samsung',
+    price: 14.99,
+    description: 'Latest bestselling fiction novel.',
+    image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    categoryId: 6, // Books
+    featured: true,
+    dateAdded: '2023-04-01',
+    bannerImage: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+  },
+  {
+    id: 10,
+    name: 'Building Blocks Set',
+    brand: 'apple',
+    price: 49.99,
+    description: 'Creative building blocks for kids.',
+    image: 'https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    categoryId: 7, // Toys
+    featured: false,
+    dateAdded: '2023-03-15',
+    bannerImage: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+  },
+  {
+    id: 11,
+    name: 'Organic Coffee',
+    brand: 'sony',
+    price: 12.99,
+    description: 'Premium organic coffee beans.',
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    categoryId: 8, // Grocery
+    featured: true,
+    dateAdded: '2023-02-28',
+    bannerImage: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+  },
+  // Add these to your products array in products.js:
+{
+  id: 12,
+  name: 'Wireless Earbuds',
+  brand: 'apple',
+  price: 79.99,
+  description: 'Premium sound quality with noise cancellation.',
+  image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+  categoryId: 1, // Electronics
+  featured: true,
+  dateAdded: '2023-03-05',
+  bannerImage: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+},
+{
+  id: 13,
+  name: 'Designer Handbag',
+  brand: 'apple',
+  price: 149.99,
+  description: 'Luxury handbag with multiple compartments.',
+  image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+  categoryId: 2, // Fashion
+  featured: true,
+  dateAdded: '2023-02-14',
+  bannerImage: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+},
+{
+  id: 14,
+  name: 'Air Fryer',
+  brand: 'samsung',
+  price: 89.99,
+  description: 'Digital air fryer with multiple cooking modes.',
+  image: 'https://media.istockphoto.com/id/1410984931/photo/woman-cooking-with-modern-air-fryer.jpg?s=612x612&w=0&k=20&c=AxRB-OaMTv2BstYri_LZ9mQV6tMdB0Hsix1QnVXR27Q=',
+  categoryId: 3, // Home & Kitchen
+  featured: true,
+  dateAdded: '2023-04-18',
+  bannerImage: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+},
+{
+  id: 15,
+  name: 'Perfume Set',
+  brand: 'sony',
+  price: 59.99,
+  description: 'Luxury fragrance collection.',
+  image: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+  categoryId: 4, // Beauty
+  featured: true,
+  dateAdded: '2023-01-22',
+  bannerImage: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+},
+{
+  id: 16,
+  name: 'Dumbbell Set',
+  brand: 'sony',
+  price: 69.99,
+  description: 'Adjustable weight dumbbells.',
+  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+  categoryId: 5, // Sports
+  featured: true,
+  dateAdded: '2023-03-28',
+  bannerImage: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+},
+{
+  id: 17,
+  name: 'Cookbook Collection',
+  brand: 'apple',
+  price: 34.99,
+  description: 'Set of 5 best-selling cookbooks.',
+  image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+  categoryId: 6, // Books
+  featured: true,
+  dateAdded: '2023-02-08',
+  bannerImage: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+}
+];

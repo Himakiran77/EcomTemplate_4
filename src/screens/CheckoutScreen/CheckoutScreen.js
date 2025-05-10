@@ -438,12 +438,14 @@ import Images from '../../assets/Images';
 import { addOrder, clearOrders } from '../../redux/orderSlice';
 // import { clearCart, clearBuyNowItem } from '../../redux/cartSlice'; // Import cart actions
 import { clearCart, clearBuyNow } from '../../redux/cartSlice';
+import { useRoute } from '@react-navigation/native';
 
 const { width, height } = Dimensions.get('window');
 
 const CheckoutScreen = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
+  const route = useRoute();
   
   // Get both cart items and buyNowItem from Redux store
   const { items: cartItems, buyNowItem } = useSelector(state => state.cart);
@@ -452,6 +454,21 @@ const CheckoutScreen = () => {
   const [expiry, setExpiry] = useState('');
   const [cvv, setCvv] = useState('');
   const [name, setName] = useState('');
+  const [deliveryAddress, setDeliveryAddress] = useState(
+    route.params?.newAddress || {
+      name: 'John Doe',
+      street: '123 Main Street',
+      city: 'New York',
+      state: 'NY',
+      zipCode: '10001',
+      country: 'United States',
+      phone: '+1 (555) 123-4567'
+    }
+  );
+
+  const handleChangeAddress = () => {
+    navigation.navigate('AddressForm', { currentAddress: deliveryAddress });
+  };
 
   // Determine which items to display based on flow
   const itemsToCheckout = buyNowItem ? [buyNowItem] : cartItems;
@@ -537,7 +554,7 @@ const CheckoutScreen = () => {
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         {/* Delivery Address */}
-        <View style={styles.section}>
+        {/* <View style={styles.section}>
           <Text style={styles.sectionTitle}>Delivery Address</Text>
           <View style={styles.addressCard}>
             <Text style={styles.addressText}>John Doe</Text>
@@ -549,7 +566,25 @@ const CheckoutScreen = () => {
               <Text style={styles.changeButtonText}>Change</Text>
             </TouchableOpacity>
           </View>
-        </View>
+        </View> */}
+        <View style={styles.section}>
+    <Text style={styles.sectionTitle}>Delivery Address</Text>
+    <View style={styles.addressCard}>
+      <Text style={styles.addressText}>{deliveryAddress.name}</Text>
+      <Text style={styles.addressText}>{deliveryAddress.street}</Text>
+      <Text style={styles.addressText}>
+        {`${deliveryAddress.city}, ${deliveryAddress.state} ${deliveryAddress.zipCode}`}
+      </Text>
+      <Text style={styles.addressText}>{deliveryAddress.country}</Text>
+      <Text style={styles.addressText}>{deliveryAddress.phone}</Text>
+      <TouchableOpacity 
+        style={styles.changeButton}
+        onPress={handleChangeAddress}
+      >
+        <Text style={styles.changeButtonText}>Change</Text>
+      </TouchableOpacity>
+    </View>
+  </View>
 
         {/* Order Items */}
         <View style={styles.section}>

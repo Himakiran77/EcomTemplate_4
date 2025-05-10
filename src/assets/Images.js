@@ -22,6 +22,10 @@ const Images = {
     Nike: require('../assets/Nike.jpg'),
     puma: require('../assets/puma.jpg'),
     Reebok: require('../assets/Reebok.jpg'),
+    Apple: require('../assets/Apple.png'),
+    Samsung: require('../assets/Samsung.png'),
+    Sony: require('../assets/Sony.png'),
+    share: require('../assets/share.png'),
 }
 
 export default Images;
