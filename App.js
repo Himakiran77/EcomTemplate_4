@@ -20,6 +20,7 @@ import OtpScreen from './src/screens/OtpScreen/OtpScreen';
 import OrdersScreen from './src/screens/OrdersScreen/OrdersScreen';
 import BrandProductScreen from './src/screens/BrandProductScreen/BrandProductScreen';
 import AddressForm from './src/screens/AddressForm/AddressForm';
+import ThreeDViewScreen from './src/screens/ThreeDViewScreen/ThreeDViewScreen';
 
 const homeIcon = require('./src/assets/Home.png');
 const wishlistIcon = require('./src/assets/wishlist.png');
@@ -55,6 +56,7 @@ const MainStack = () => (
     <Stack.Screen name="Tabs" component={BottomTabs} options={{ headerShown: false }} />
     <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
     <Stack.Screen name="ProductDetails" component={ProductDetailsScreen} options={{ headerShown: false }} />
+    <Stack.Screen name='ThreeDView' component={ThreeDViewScreen} options={{title: 'View in 3D Mode'}}  />
     <Stack.Screen name="Wishlist" component={WishlistScreen} options={{ headerShown: true }} />
     <Stack.Screen name='Orders' component={OrdersScreen} options={{headerShown: false}} />
     <Stack.Screen name="Checkout" component={CheckoutScreen} options={{ headerShown: false }} />

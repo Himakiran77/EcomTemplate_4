@@ -1701,6 +1701,10 @@ const images = product.image ? Array(5).fill(product.image) : [];
     }
   };
 
+    const handlenavigateTo3d = () => {
+    navigation.navigate('ThreeDView');
+  }
+
   return (
     <SafeAreaView style={styles.safeArea}>
       {/* Animated Header */}
@@ -1760,6 +1764,10 @@ const images = product.image ? Array(5).fill(product.image) : [];
           <Text style={[styles.title, isSmallDevice && styles.titleSmall]}>
             {product.title || product.name}
           </Text>
+
+          <TouchableOpacity style={styles.view3DContainer} onPress={handlenavigateTo3d}>
+            <Text style={styles.threeD}>View in 3D</Text>
+          </TouchableOpacity>
 
           <View style={styles.priceRatingContainer}>
             <Text style={styles.price}>${product.price.toFixed(2)}</Text>
@@ -2049,6 +2057,17 @@ const styles = StyleSheet.create({
   titleSmall: {
     fontSize: 20,
     lineHeight: 26,
+  },
+    view3DContainer: {
+    // alignSelf: 'flex-end',  
+  },
+  threeD: {
+    fontSize: 14,
+    fontWeight: '600',
+    marginBottom: 6,
+    color: 'blue',
+    lineHeight: 18,
+    textDecorationLine: 'underline', 
   },
   priceRatingContainer: {
     flexDirection: "row",
